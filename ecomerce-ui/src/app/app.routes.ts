@@ -6,6 +6,7 @@ import {ProductListComponent} from './admin/pages/product-list/product-list.comp
 import {OrderListComponent} from './admin/pages/order-list/order-list.component';
 import {ReclamationListComponent} from './admin/pages/reclamation-list/reclamation-list.component';
 import {PaymentListComponent} from './admin/pages/payment-list/payment-list.component';
+import {EventListComponent} from './admin/pages/event-list/event-list.component';
 
 export const routes: Routes = [
   {path:'front',loadComponent: () => import('./front/front.component').then(m => m.FrontComponent),
@@ -20,6 +21,7 @@ export const routes: Routes = [
     { path: 'orders', component: OrderListComponent },
     { path: 'reclamations', component: ReclamationListComponent },
     { path: 'payments', component: PaymentListComponent },
+    { path: 'events', component: EventListComponent},
     ]},
 
 ];

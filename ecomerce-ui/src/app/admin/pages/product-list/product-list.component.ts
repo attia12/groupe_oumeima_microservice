@@ -84,67 +84,7 @@ export class ProductListComponent implements OnInit{
       reader.readAsDataURL(file);
     }
   }
-  // handleImageUpload(event: any) {
-  //   const file = event.target.files[0];
-  //   if (file) {
-  //     this.newProduct.cover = file;
-  //   }
-  // }
 
-
-
-  // submitAddProduct() {
-  //   const productPayload = {
-  //     name: this.newProduct.name,
-  //     description: this.newProduct.description,
-  //     availableQuantity: this.newProduct.availableQuantity,
-  //     price: this.newProduct.price,
-  //     categoryId: this.newProduct.categoryId
-  //   };
-  //
-  //   this.productService.createProduct(productPayload).pipe(
-  //
-  //     switchMap((productId: string) => {
-  //       const tasks = [];
-  //
-  //
-  //       // Only upload if there's an image
-  //       if (this.newProduct.cover) {
-  //         tasks.push(this.productService.uploadProductCover(productId, this.newProduct.cover));
-  //       }
-  //
-  //       return tasks.length > 0 ? forkJoin(tasks).pipe(switchMap(() => of(productId))) : of(productId);
-  //     })
-  //   ).subscribe({
-  //     next: (productId) => {
-  //       // You might want to reload product or re-fetch, or just push it manually:
-  //
-  //       const category = this.categories().find(c => c.id === this.newProduct.categoryId);
-  //       const categoryName = category ? category.name : '';
-  //
-  //
-  //       const newProductToAdd = {
-  //         id: productId,
-  //         name: this.newProduct.name,
-  //         description: this.newProduct.description,
-  //         price: this.newProduct.price,
-  //         availableQuantity: this.newProduct.availableQuantity,
-  //         categoryId: this.newProduct.categoryId,
-  //         categoryName: categoryName,
-  //         cover: this.newProduct.coverPreview
-  //       };
-  //       this.products.update(prev => [...prev, newProductToAdd]);
-  //
-  //
-  //       const modal = bootstrap.Modal.getInstance(document.getElementById('addProductModal'));
-  //       modal?.hide();
-  //       this.resetAddForm();
-  //     },
-  //     error: (err) => {
-  //       console.error('Failed to add product:', err);
-  //     }
-  //   });
-  // }
   submitAddProduct() {
     const productPayload = {
       name: this.newProduct.name,

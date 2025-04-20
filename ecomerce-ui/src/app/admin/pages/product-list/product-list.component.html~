@@ -57,7 +57,7 @@
                   <span class="badge bg-info">{{ product.categoryName }}</span>
                 </td>
                 <td class="text-end">
-               
+
                   <button class="btn btn-sm btn-outline-primary me-2" (click)="editProduct(product)">
                     <i class="bi bi-pencil-square"></i>
                   </button>

@@ -28,6 +28,10 @@ spring:
           uri: lb:http://RECLAMATION-SERVICE
           predicates:
             - Path=/api/v1/reclamations/**
+        - id: event-service
+          uri: lb:http://EVENT-SERVICE
+          predicates:
+            - Path=/api/v1/events/**
 
 
 server:

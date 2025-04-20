@@ -215,6 +215,19 @@
   </div>
 </section>
 <app-products/>
+
+  <div class="container mt-4">
+    <div class="d-flex flex-row gap-4 overflow-auto px-2">
+      @for (event of events; track event._id) {
+        <app-card-event
+          class="flex-shrink-0"
+          style="width: 500px;"
+          [event]="event"
+          (eventUpdated)="onEventUpdated($event)">
+        </app-card-event>
+      }
+    </div>
+  </div>
 <app-contact/>
 }
 <router-outlet></router-outlet>
